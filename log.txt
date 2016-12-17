@@ -1,0 +1,93 @@
+
+
+Top of the training data:
+
+   PassengerId  Survived  Pclass  \
+0            1         0       3   
+1            2         1       1   
+2            3         1       3   
+3            4         1       1   
+4            5         0       3   
+
+                                                Name     Sex   Age  SibSp  \
+0                            Braund, Mr. Owen Harris    male  22.0      1   
+1  Cumings, Mrs. John Bradley (Florence Briggs Th...  female  38.0      1   
+2                             Heikkinen, Miss. Laina  female  26.0      0   
+3       Futrelle, Mrs. Jacques Heath (Lily May Peel)  female  35.0      1   
+4                           Allen, Mr. William Henry    male  35.0      0   
+
+   Parch            Ticket     Fare Cabin Embarked  
+0      0         A/5 21171   7.2500   NaN        S  
+1      0          PC 17599  71.2833   C85        C  
+2      0  STON/O2. 3101282   7.9250   NaN        S  
+3      0            113803  53.1000  C123        S  
+4      0            373450   8.0500   NaN        S  
+
+
+Summary statistics of training data
+
+/opt/conda/lib/python3.5/site-packages/numpy/lib/function_base.py:3834: RuntimeWarning: Invalid value encountered in percentile
+  RuntimeWarning)
+
+       PassengerId    Survived      Pclass         Age       SibSp  \
+count   891.000000  891.000000  891.000000  714.000000  891.000000   
+mean    446.000000    0.383838    2.308642   29.699118    0.523008   
+std     257.353842    0.486592    0.836071   14.526497    1.102743   
+min       1.000000    0.000000    1.000000    0.420000    0.000000   
+25%     223.500000    0.000000    2.000000         NaN    0.000000   
+50%     446.000000    0.000000    3.000000         NaN    0.000000   
+75%     668.500000    1.000000    3.000000         NaN    1.000000   
+max     891.000000    1.000000    3.000000   80.000000    8.000000   
+
+            Parch        Fare  
+count  891.000000  891.000000  
+mean     0.381594   32.204208  
+std      0.806057   49.693429  
+min      0.000000    0.000000  
+25%      0.000000    7.910400  
+50%      0.000000   14.454200  
+75%      0.000000   31.000000  
+max      6.000000  512.329200  
+
+   Pclass  Survived
+0       1  0.629630
+1       2  0.472826
+2       3  0.242363
+
+      Sex  Survived
+0  female  0.742038
+1    male  0.188908
+
+   FamilySize  Survived
+0           1  0.303538
+1           2  0.552795
+2           3  0.578431
+3           4  0.724138
+4           5  0.200000
+5           6  0.136364
+6           7  0.333333
+7           8  0.000000
+8          11  0.000000
+
+   IsAlone  Survived
+0        0  0.505650
+1        1  0.303538
+
+  CategoricalFare  Survived
+0       [0, 7.91]  0.197309
+1  (7.91, 14.454]  0.303571
+2    (14.454, 31]  0.454955
+3   (31, 512.329]  0.581081
+
+../src/script.py:49: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  dataset['Age'][np.isnan(dataset['Age'])] = age_null_random_list
+
+  CategoricalAge  Survived
+0    (-0.08, 16]  0.527273
+1       (16, 32]  0.351648
+2       (32, 48]  0.378049
+3       (48, 64]  0.434783
+4       (64, 80]  0.090909
